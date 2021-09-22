@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Principios de Diseño y DDD}
+\author{
+Valdez Apaza Rafael Jesus 
+\and 
+Sagua Ramos Gustavo Alonso,
+\and 
+Romero Roque Angelica Beatriz,
+\and 
+Yucra Mamani Vanessa,
+\and 
+Cutipa Machaca Arnold Felix,
+\and 
+Poma Chura Jhon Romario	
+
+}
+
+\date{September 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Resumen}
+
+En el presente documento se hablará de un tema importante como son los principios de diseños, abordaremos los principios de SOLID, DRY, se hablará qué son, ventajas y como aplicarlos. 
+
+También se dará una explicación básica de cada principio y ejemplos prácticos. 
+
+Diseño guiado por el dominio, o Domain-driven design es un enfoque para el desarrollo de software con necesidades complejas mediante una profunda conexión entre la implementación y los conceptos del modelo y núcleo del negocio. 
+
+El diseño guiado por el dominio no es una tecnología ni una metodología, este provee una estructura de prácticas y terminologías para tomar decisiones de diseño que enfoquen y aceleren el manejo de dominios complejos en los proyectos de software. 
+El término fue acuñado por Eric Evans en su libro Domain-Driven Design - Tackling Complexity in the Heart of Software. 
+
+\section{Abstract}
+
+In this document we will talk about an important topic such as design principles, we will address the principles of SOLID, DRY and what they are, what they are and how to apply them will be discussed. 
+
+A basic explanation of each principle and practical examples will also be given. 
+
+Domain-driven design, is an approach to developing software with complex needs through a deep connection between the implementation and the concepts of the business model and core. 
+
+Domain-driven design is not a technology or a methodology, it provides a framework of practices and terminologies to make design decisions that focus and accelerate the management of complex domains in software projects. 
+
+The term was coined by Eric Evans in his book Domain-Driven Design - Tackling Complexity in the Heart of Software. 
+
+\section{Introducción}
+
+Domain Driven Design (DDD) es una práctica de desarrollo de software que pone el acento en el Dominio del Negocio como faro del proyecto y en su Modelo como herramienta de comunicación entre negocio y tecnología. En el equipo de desarrollo de JPA empleamos Domain Driven Design  como referencia para afrontar proyectos de desarrollo de cierta complejidad. Fruto de nuestros errores, pero, sobre todo de responder a las preguntas honestas de unos compañeros y los dardos envenenados de otros, hemos ido refinando su aplicación. En este artículo te presento algunas conclusiones y prácticas que pueden facilitarte la aproximación a sus principios. Sus principios se basan en: 
+
+\begin{itemize}
+    \item Colocar los modelos y reglas de negocio de la organización, en el core de la aplicación 
+    \item Basar nuestro dominio complejo, en un modelo de software. 
+    
+    \item Se utiliza para tener una mejor perspectiva a nivel de colaboración entre expertos del dominio y los desarrolladores, para concebir un software con los objetivos bien claros.
+\end{itemize} 
+
+\section{Desarrollo}
+
+Principios SOLID
+\newline 
+\newline
+SOLID es un acrónimo que engloba el nombre 5 principios, originalmente dirigidos a la programación orientada a objetos, pero que son aplicables a muchas otras cosas. Los 5 principios son:  
+\newline
+\begin{itemize}
+    \item Single Responsibility 
+
+    El Single Responsibility Principle (SRP) o principio de responsabilidad única es un principio que defiende que una clase o módulo debería tener responsabilidad sobre una única funcionalidad del software. 
+
+    \item Open/Closed 
+
+    Representa la O de SOLID. Con este principio se pretende minimizar el efecto cascada que puede suceder cuando cambiamos el comportamiento de una clase. Si existen clientes que dependan de ella, es posible que tengan que cambiar su comportamiento también. 
+
+    \item Liskov Substitution Principle 
+
+    Concepto introducido por Barbara Liskov que representa la L de los principios S.O.L.I.D. El principio dice: una clase que hereda de otra debe poder usarse como su padre sin necesidad de conocer las diferencias entre ellas. 
+
+    \item Interface Segregation Principle 
+
+    La interface Segregation Principle (ISP) o principio de segregación de interfaces defiende que ninguna clase debería depender de métodos que no usa. 
+
+    \item Dependency Inversion 
+
+    Representa la D de los principios S.O.L.I.D. El principio dice, los módulos de alto nivel no deben depender de módulos de bajo nivel, ambos deben depender de abstracciones. El principio tiene como fin evitar depender de concreciones para minimizar el grado de acoplamiento entre los componentes. 
+
+\end{itemize} 
+
+Importancia:
+\newline
+
+\linebreak Permiten crear software estructurado correctamente que resista el paso del tiempo.
+\newline
+\newline
+Principio DRY 
+\newline
+\newline
+El principio DRY es un acrónimo del inglés “Don’t Repeat Yourself” que significa “No te repitas” y éste consiste en evitar las duplicaciones lógicas en el software. 
+\newline 
+\newline 
+Importancia: 
+
+\begin{itemize}
+ \item Código mantenible: evitar la repetición de código permite que, si alguna vez cambia la funcionalidad que estes repitiendo, no lo tengas que hacer en todos los lugares en los que lo repetiste. 
+
+ \item Reduce el tamaño del código: Esto lo hace más legible y entendible, porque hay menos código que entender. Los procesos para evitar la repetición implican nombrar el pedazo de código que estás reutilizando para identificarlo, esto hace el código más legible si lo nombraste bien. 
+
+ \item Ahorra tiempo: Al tener pedazos de código disponibles para reutilizarlos, en el futuro estás más preparado para lograr lo mismo en menos tiempo. 
+\end{itemize} 
+\section{Conclusiones}
+
+Domain Driven Design es una técnica que implica dos transformaciones, del negocio al modelo y del modelo al software 
+ 
+El modelo juega un papel central para asegurar la correspondencia entre el software y el negocio al que debe representar. El modelo debe estar siempre presente en la mente, en los ordenadores y en las pizarras de los equipos multidisciplinares. Buscamos una mentalidad de “Policía del Modelo” que persiga cualquier desviación de la consistencia de esta correspondencia.  
+
+Este es el primero de una serie sobre lo que hemos aprendido aplicando DDD en Jerónimo Palacios y Asociados. En el próximo, bajaré a la transformación del modelo en diseño. Algunas soluciones propuestas por DDD que hemos empleado y otras que no. 
+
+\section{Recomendaciones}
+
+Quiero aclarar que esta técnica fue ideada para el desarrollo de aplicaciones complejas y está orientada a proyectos que utilicen metodologías agiles; uno de los aspectos más complicados de los proyectos de software complejos que están en el dominio del mundo real al que sirve el software y no en su implementación es en ese punto en el que el DDD te podrá ayudar a tener una mejor visión y enfoque para evolucionar a través de sucesivas iteraciones de diseño. 
+
+\section{Bibliografia}
+\begin{itemize}
+\item Eric Evans. Strategic Design – Making models work in large projects. 
+
+\item Eric Evans. Domain-Driven Design: Tackling complexity in the heart of Software. 
+
+\item Hunt y Thomas. Pragmatic Unit Testing 
+
+\item UPC - EPE - Ingeniería de Sistemas - Programa de Actualización Profesional 
+\end{itemize} 
+\end{document}
